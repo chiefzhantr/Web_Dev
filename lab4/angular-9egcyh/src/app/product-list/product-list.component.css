@@ -1,27 +1,9 @@
-ul {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    text-align: left;
+img {
+    width: 150pt;
 }
-
-
-li {
+div {
     margin-bottom: 50pt;
 }
-li * {
-    text-align: left;
-}
-#share{
-    width: 70pt;
-    margin-left: 0pt;
-}
-#see_info{
-    width: 70pt;
-    margin-left: 10pt;
-}
-
 
 /*
 Copyright Google LLC. All Rights Reserved.

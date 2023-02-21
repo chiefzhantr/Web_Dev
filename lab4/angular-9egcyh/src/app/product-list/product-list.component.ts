@@ -11,8 +11,10 @@ export class ProductListComponent {
 
   products = [...products];
 
-  share() {
-    window.alert('The product has been shared!');
+  share(name: string) {
+    const message = name
+    const telegramUrl = `https://t.me/share/url?url=${encodeURIComponent(message)}`;
+    window.open(telegramUrl);
   }
 
   onNotify() {
