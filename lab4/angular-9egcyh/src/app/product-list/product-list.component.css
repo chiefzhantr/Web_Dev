@@ -1,0 +1,30 @@
+ul {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+}
+
+
+li {
+    margin-bottom: 50pt;
+}
+li * {
+    text-align: left;
+}
+#share{
+    width: 70pt;
+    margin-left: 0pt;
+}
+#see_info{
+    width: 70pt;
+    margin-left: 10pt;
+}
+
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+*/
