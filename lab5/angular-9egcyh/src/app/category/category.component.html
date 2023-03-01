@@ -1,0 +1,20 @@
+<h2>Product Categories</h2>
+<div *ngFor="let category of categories">
+    <img [src] = "category.image">
+    <h3>
+        <a 
+        [title]="category.name"
+        (click) = "setCategory(category)"
+        routerLink='/categories/:${category.name}'
+        target="_blank"
+        >
+          {{ category.name }}
+        </a>
+      </h3>
+</div>
+
+<!-- 
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at https://angular.io/license
+-->
