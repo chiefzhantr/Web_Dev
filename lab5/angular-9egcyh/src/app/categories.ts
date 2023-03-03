@@ -7,30 +7,26 @@ export interface Category {
 
 export const categories = [
     {
-        name: "Red items",
-        image: 'assets/red.png',
-        description: "Red products",
+        name: "Blue items",
+        image: 'assets/blue.png',
         itemsId: [1,2,3,4,5]
         // url:''
     },
     {
         name: "Green items",
         image: 'assets/green.png',
-        description: "Red products",
         itemsId: [6,7,8,9,10]
         // url:
     },
     {
-        name: "Blue items",
-        image: 'assets/blue.png',
-        description: "Red products",
+        name: "Red items",
+        image: 'assets/red.png',
         itemsId: [11,12,13,14,15]
         // url:
     },
     {
         name: "Yellow items",
         image: 'assets/yellow.jpg',
-        description: "Red products",
         itemsId: [16,17,18,19,20]
         // url:
     }

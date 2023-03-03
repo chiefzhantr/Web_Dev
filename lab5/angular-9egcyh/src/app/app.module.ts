@@ -21,7 +21,7 @@ import { CategoryComponent } from './category/category.component';
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: CategoryComponent },
-      { path: 'categories/:name', component: ProductListComponent },
+      { path: 'product-list', component: ProductListComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'cart', component: CartComponent },
       { path: 'shipping', component: ShippingComponent },

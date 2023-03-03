@@ -1,20 +1,29 @@
 import { Component } from '@angular/core';
-import { elementAt } from 'rxjs';
-import { currentCategoryProducts } from '../category/category.component';
 import { GlobalsService } from '../globals.service';
 import { Product } from '../products';
+import { ActivatedRoute, Router } from '@angular/router';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent {
-  products : Product[];
+  products : Product[] = [];
 
-  constructor(private globalService: GlobalsService) {
-    this.products = globalService.products;
-    console.log(this.products)
+  constructor(private route: ActivatedRoute, private globalService: GlobalsService) { 
+      
   }
+  ngOnInit() {
+    this.route.queryParams.subscribe(params => {
+      if (params['products']) {
+        this.products = JSON.parse(params['products']);
+      } else {
+        this.products = this.globalService.products;
+      }
+    });
+  }
+  
+
 
   share(name: string) {
     const message = name

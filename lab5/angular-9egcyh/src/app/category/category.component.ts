@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { categories, Category } from '../categories';
 import { Product, products } from '../products';
 import { GlobalsService } from '../globals.service';
+import { Router } from '@angular/router';
+
 export let currentCategoryProducts : Product[] = products
 
 @Component({
@@ -13,15 +15,14 @@ export let currentCategoryProducts : Product[] = products
 export class CategoryComponent {
   categories = [...categories]
   setCategory(category: Category) {
-    console.log("DBG" + currentCategoryProducts)
-    currentCategoryProducts = products.filter((product)=>{
+    const currentCategoryProducts = products.filter((product)=>{
       return category.itemsId.includes(product.id)
     })
-    console.log("DBG" +currentCategoryProducts)
     this.globalService.setProducts(currentCategoryProducts)
+    this.router.navigate(['/product-list'], { queryParams: { products: JSON.stringify(currentCategoryProducts) } });
   }
-  constructor(private globalService: GlobalsService) {
-    
+  constructor(private router: Router, private globalService: GlobalsService) { 
+
   }
   
 }
