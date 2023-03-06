@@ -1,0 +1,7 @@
+<button [routerLink]="['/albums/:id']">back</button>
+<h1>Albums photos</h1>
+<div *ngFor="let album of albumPhotos">
+    <h3>
+      <img [src] = "album.url">
+    </h3>
+</div>

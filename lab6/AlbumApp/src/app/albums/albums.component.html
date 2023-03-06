@@ -1,0 +1,17 @@
+<h1>Albums!</h1>
+
+<div>
+    <input placeholder="Type title of new album" [(ngModel)]="newAlbumsTitle">
+    <input placeholder="Type user id of new album" [(ngModel)]="newAlbumsUserId">
+    <input placeholder="Type id of new album" [(ngModel)]="newAlbumsId">
+    <button (click)="create()">Create new album</button>
+</div>
+
+<div *ngFor="let album of albums">
+    <h3>
+      <a [title]="album.title" [routerLink]="['/albums', album.id]">
+        {{album.title}}
+      </a>
+    </h3>
+    <button (click) = "delete(album)"> delete</button>
+</div>

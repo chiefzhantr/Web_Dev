@@ -1,0 +1,6 @@
+<button [routerLink]="['/albums']">back</button>
+<h1>Album's details</h1>
+<p>Title: {{album?.title}}</p>
+<button [routerLink]="['/albums',album?.id,'photos']">Photos</button>
+<input placeholder="Type new title of album" [(ngModel)]="title">
+<button (click)="saveNewTitle()">Save</button>
