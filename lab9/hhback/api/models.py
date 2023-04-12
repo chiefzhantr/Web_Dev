@@ -4,7 +4,7 @@ from django.db import models
 class Company(models.Model):
     name = models.CharField(max_length=255)
     description = models.TextField()
-    city = models.CharField()
+    city = models.CharField(max_length=255)
     address = models.TextField()
 
     class Meta:
@@ -14,7 +14,7 @@ class Company(models.Model):
         return self.name
 
 class Vacancy(models.Model):
-    name = models.CharField()
+    name = models.CharField(max_length=255)
     description = models.TextField()
     salary = models.FloatField()
     company = models.ForeignKey
